@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .fill_w .f_txt {
+    color: #181b1d;
+    background: linear-gradient(90deg,#fff,#fff,rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0));
+    background-size: 0;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: color,background;
+    transition-timing-function: cubic-bezier(0.165,0.84,0.44,1);
+    transition-duration: 0s;
+    transition-delay: 0s;
+    position: relative;
+    z-index: 2
+    }
+
+    .fill_w._ov .f_txt {
+        transition: color .15s cubic-bezier(.165, .84, .44, 1),background .45s cubic-bezier(.455, .03, .515, .955) 50ms;
+        background-size: 400%;
+        color: transparent;
+        /* text-stroke: 1px #fefefe; */
+        -webkit-text-stroke: 1px #fefefe
+    }
+
+
+    .fill_w._leave .f_txt {
+        color: #181b1d;
+        background: 0 0;
+        transition: color;
+        transition-duration: .45s;
+        transition-delay: 0s;
+        /* text-stroke: inherit; */
+        -webkit-text-stroke: inherit;
+        background-size: 0
+    }
+</style>
+<body>
+    
+</body>
+</html>

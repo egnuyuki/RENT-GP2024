@@ -1,0 +1,100 @@
+.fill_w .f_txt {
+    color: #181b1d;
+    background: linear-gradient(90deg, #fff, #fff, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background-size: 0;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: color, background;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-duration: 0s;
+    transition-delay: 0s;
+    position: relative;
+    z-index: 2
+}
+
+.fill_w .ar {
+    transition: opacity, transform;
+    transition-duration: 0s;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    opacity: 0;
+    transform: scaleX(1.5) translateX(-15%)
+}
+
+.fill_w .ar path {
+    transition: stroke;
+    transition-duration: 0s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    stroke: #fefefe
+}
+
+.fill_w h3 .c path {
+    transition: stroke;
+    transition-duration: 0s;
+    stroke: #181b1d !important
+}
+
+.fill_w._ov .f_txt {
+    transition: color .15s cubic-bezier(.165, .84, .44, 1), background .45s cubic-bezier(.455, .03, .515, .955) 50ms;
+    background-size: 400%;
+    color: transparent;
+    text-stroke: 1px #fefefe;
+    -webkit-text-stroke: 1px #fefefe
+}
+
+.fill_w._ov .ar {
+    opacity: 1;
+    transform: scaleX(1);
+    transition-duration: .45s;
+    transition-delay: 0.15s;
+    transform-origin: right
+}
+
+.fill_w._ov .ar path {
+    stroke: #fefefe;
+    transition-duration: .45s;
+    transition-delay: 0.15s
+}
+
+.fill_w._ov h3 .c path {
+    transition: stroke;
+    transition-duration: .25s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    stroke: #fefefe !important
+}
+
+.fill_w._leave .f_txt {
+    color: #181b1d;
+    background: 0 0;
+    transition: color;
+    transition-duration: .45s;
+    transition-delay: 0s;
+    text-stroke: inherit;
+    -webkit-text-stroke: inherit;
+    background-size: 0
+}
+
+.fill_w._leave .ar {
+    opacity: 0;
+    transition-duration: .15s;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform-origin: right;
+    transition: opacity .15s cubic-bezier(.165, .84, .44, 1) 0s, transform .15s cubic-bezier(.165, .84, .44, 1) .15s;
+    transform: scaleX(1.5) translateX(-15%)
+}
+
+.fill_w._leave .ar path {
+    stroke: #fefefe;
+    transition-duration: .25s;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1)
+}
+
+.fill_w._leave h3 .c path {
+    transition: stroke;
+    transition-duration: .25s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    stroke: #181b1d !important
+}

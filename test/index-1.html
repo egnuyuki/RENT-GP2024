@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>卒業公演-rent</title>
+    <style>
+        /* reset styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    
+        /* global styles */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+    
+        a {
+            color: #c00;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            text-decoration: underline;
+        }
+    
+        /* header styles */
+        header {
+            background-color: #000;
+            color: #f00;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            /* position: fixed;
+            top: 0;
+            left: 0;
+            right: 0; */
+            z-index: 1;
+        }
+    
+        header h1 {
+            font-size: 2rem;
+        }
+    
+        nav {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+    
+        nav ul {
+            list-style: none;
+        }
+    
+        nav li {
+            margin-bottom: 1rem;
+        }
+    
+        .toggle {
+            display: none;
+        }
+    
+        .toggle:checked~nav {
+            display: flex;
+            z-index: 100;
+        }
+    
+        .hamburger {
+            display: block;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    
+        /* main styles */
+        main {
+            padding: 1rem;
+        }
+    
+        section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+    
+        section h2 {
+            margin-bottom: 1rem;
+        }
+    
+        /* footer styles */
+        footer {
+            background-color: #eee;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+    
+        footer p {
+            margin: 0;
+        }
+    
+        footer a {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/">卒業公演-rent</a></h1>
+        <label for="toggle" class="hamburger">&#9776;</label>
+        <input type="checkbox" id="toggle" class="toggle">
+        <nav>
+            <ul>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#cast">Cast</a></li>
+                <li><a href="/#ticket">Ticket</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome to 卒業公演-rent</h2>
+        <p>卒業公演としてRENTを公演します。公演情報やチケット情報、キャスト・スタッフ情報などは以下のページでご確認ください。</p>
+        <ul>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#cast">Cast</a></li>
+            <li><a href="/#ticket">Ticket</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+        <section id="about">
+            <h2>About</h2>
+            <p>卒業公演としてRENTを上演します。公演情報やチケット情報などは以下のページでご確認ください。</p>
+        </section>
+        <section id="cast">
+            <h2>Cast</h2>
+            <p>キャスト情報は準備中です。</p>
+        </section>
+        <section id="ticket">
+            <h2>Ticket</h2>
+            <p>チケット情報は準備中です。</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>お問い合わせはこちらからお願いいたします。</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 卒業公演-rent</p>
+    </footer>
+</body>
+</html>

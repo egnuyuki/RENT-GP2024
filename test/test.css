@@ -1,0 +1,292 @@
+/* reset styles */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* global styles */
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+    }
+
+    a {
+        color: #c00;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* header styles */
+    header {
+        background-color: #000;
+        color: #f00;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+        /*========= ナビゲーションのためのCSS ===============*/
+    
+        #g-nav {
+            /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+            position: fixed;
+            z-index: 999;
+            /*ナビのスタート位置と形状*/
+            top: -120%;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            /*ナビの高さ*/
+            background: #131111;
+            /*動き*/
+            transition: all 0.6s;
+        }
+    
+        /*アクティブクラスがついたら位置を0に*/
+        #g-nav.panelactive {
+            top: 0;
+        }
+    
+        /*ナビゲーションの縦スクロール*/
+        #g-nav.panelactive #g-nav-list {
+            /*ナビの数が増えた場合縦スクロール*/
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+            height: 100vh;
+            /*表示する高さ*/
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+    
+        /*ナビゲーション*/
+        #g-nav ul {
+            /*ナビゲーション天地中央揃え*/
+            position: absolute;
+            z-index: 999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    
+        /*リストのレイアウト設定*/
+    
+        #g-nav li {
+            list-style: none;
+            text-align: center;
+        }
+    
+        #g-nav li a {
+            color: #7f0000;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: bold;
+        }
+    
+        /*========= ボタンのためのCSS ===============*/
+        .openbtn {
+            position: fixed;
+            z-index: 9999;
+            /*ボタンを最前面に*/
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+        }
+    
+        /*×に変化*/
+        .openbtn span {
+            display: inline-block;
+            transition: all .4s;
+            position: absolute;
+            left: 14px;
+            height: 3px;
+            border-radius: 2px;
+            background-color: #a10000;
+            width: 45%;
+        }
+    
+        .openbtn span:nth-of-type(1) {
+            top: 15px;
+        }
+    
+        .openbtn span:nth-of-type(2) {
+            top: 23px;
+        }
+    
+        .openbtn span:nth-of-type(3) {
+            top: 31px;
+        }
+    
+        .openbtn.active span:nth-of-type(1) {
+            top: 18px;
+            left: 18px;
+            transform: rotate(-45deg) translateY(6px);
+            width: 30%;
+        }
+    
+        .openbtn.active span:nth-of-type(2) {
+            opacity: 0;
+        }
+    
+        .openbtn.active span:nth-of-type(3) {
+            top: 30px;
+            left: 18px;
+            transform: translateY(-6px) rotate(45deg);
+            width: 30%;
+        }
+
+
+    /* main styles */
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+    }
+
+    section h2 {
+        margin-bottom: 1rem;
+    }
+
+
+
+
+
+    /* footer styles */
+    footer {
+        background-color: #eee;
+        color: #555;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    footer a {
+        color: #333;
+    }
+
+        .fill_w .f_txt {
+            color: #181b1d;
+            background: linear-gradient(90deg, #fff, #fff, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+            background-size: 0;
+            background-repeat: no-repeat;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: color, background;
+            transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition-duration: 0s;
+            transition-delay: 0s;
+            position: relative;
+            z-index: 2
+        }
+    
+        .fill_w .ar {
+            transition: opacity, transform;
+            transition-duration: 0s;
+            transition-delay: 0s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            opacity: 0;
+            transform: scaleX(1.5) translateX(-15%)
+        }
+    
+        .fill_w .ar path {
+            transition: stroke;
+            transition-duration: 0s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            stroke: #fefefe
+        }
+    
+        .fill_w h3 .c path {
+            transition: stroke;
+            transition-duration: 0s;
+            stroke: #181b1d !important
+        }
+    
+        .fill_w._ov .f_txt {
+            transition: color .15s cubic-bezier(.165, .84, .44, 1), background .45s cubic-bezier(.455, .03, .515, .955) 50ms;
+            background-size: 400%;
+            color: transparent;
+            text-stroke: 1px #fefefe;
+            -webkit-text-stroke: 1px #fefefe
+        }
+    
+        .fill_w._ov .ar {
+            opacity: 1;
+            transform: scaleX(1);
+            transition-duration: .45s;
+            transition-delay: 0.15s;
+            transform-origin: right
+        }
+    
+        .fill_w._ov .ar path {
+            stroke: #fefefe;
+            transition-duration: .45s;
+            transition-delay: 0.15s
+        }
+    
+        .fill_w._ov h3 .c path {
+            transition: stroke;
+            transition-duration: .25s;
+            transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            stroke: #fefefe !important
+        }
+    
+        .fill_w._leave .f_txt {
+            color: #181b1d;
+            background: 0 0;
+            transition: color;
+            transition-duration: .45s;
+            transition-delay: 0s;
+            text-stroke: inherit;
+            -webkit-text-stroke: inherit;
+            background-size: 0
+        }
+    
+        .fill_w._leave .ar {
+            opacity: 0;
+            transition-duration: .15s;
+            transition-delay: 0s;
+            transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            transform-origin: right;
+            transition: opacity .15s cubic-bezier(.165, .84, .44, 1) 0s, transform .15s cubic-bezier(.165, .84, .44, 1) .15s;
+            transform: scaleX(1.5) translateX(-15%)
+        }
+    
+        .fill_w._leave .ar path {
+            stroke: #fefefe;
+            transition-duration: .25s;
+            transition-delay: 0s;
+            transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1)
+        }
+    
+        .fill_w._leave h3 .c path {
+            transition: stroke;
+            transition-duration: .25s;
+            transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            stroke: #181b1d !important
+        }
