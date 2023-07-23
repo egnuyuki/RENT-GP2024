@@ -23,7 +23,7 @@ body {
   height: 80px;
 }
 .loader::after {
-  content: "GP-2024";
+  content: "GP";
   display: block;
   position: absolute;
   text-transform: uppercase;
@@ -407,18 +407,21 @@ h3:after {
   background-color: rgba(0, 0, 0, 0.5019607843);
   color: #ddd;
   width: 100%;
-  height: 40vh;
+  height: 100vh;
   font-size: 1.2rem;
 }
 .first-text h3 {
   color: #ddd;
 }
 .first-text .box {
+  margin: auto;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  height: 100%;
+  justify-content: center;
 }
 .first-text p {
   line-height: 1.75;
