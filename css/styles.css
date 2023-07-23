@@ -23,7 +23,7 @@ body {
   height: 80px;
 }
 .loader::after {
-  content: "rent";
+  content: "GP-2024";
   display: block;
   position: absolute;
   text-transform: uppercase;
