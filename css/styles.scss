@@ -647,7 +647,10 @@ header {
     .container {
         padding: 20px 0;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        @media screen and (max-width:700px) {
+            grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+        }
         column-gap: 50px;
         row-gap: 30px;
         .item {
